@@ -19,6 +19,7 @@ class Post(models.Model):
     
     def __unicode__(self):
 	return self.judul
+   
 
 class Event(models.Model):
     nama = models.CharField(max_length=200)
