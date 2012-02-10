@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Avagata Distro</title>
+	<meta name="Robots" content="index,follow" />
+	<link rel="stylesheet" type="text/css" href="/asset/css/main.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/asset/prettyphoto/css/prettyPhoto.css" media="screen" />
+	<script type="text/javascript" src="/asset/js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="/asset/js/core.js"></script>
+	<script type="text/javascript" src="/asset/pngFix/jquery.pngFix.js"></script>
+	<script type="text/javascript" src="/asset/prettyphoto/js/jquery.prettyPhoto.js"></script>
+	<!--[if IE 6]>
+	<style>
+		#pitch .infoline {margin-top:-74px;}
+		.post-options {margin:-55px 0 40px 138px;}
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<div id="wrapper">
+		<div id="logo">
+			<img src="/asset/web/images/logo.png"/>
+		</div>
+		
+		<div id="content">
+		<!-- main menu -->
+			<ul class="menu" id="jMenu">
+				<li class="current"><a href="/landing">Home</a></li>
+				<li><a href="/blog">Blog</a></li>
+                <li><a href="/blog">Downloads</a></li>
+				<li><a href="#">Features</a>
+					<ul>
+						<li><a href="#">Designs</a></li>
+						<li><a href="#">Code</a></li>
+						<li><a href="#">Consulting</a></li>
+						<li><a href="#">Help &amp; Support</a></li>
+					</ul>
+				</li>
+                <li><a href="#">Documentation</a>
+					<ul>
+						<li><a href="#">Installations</a></li>
+                        <li><a href="#">Minimum Spesification</a></li>
+					</ul>
+				</li>
+				<li><a href="inner.html">About</a></li>
+			</ul>
+			
+			<!-- search form -->
+			
+			<div class="x"></div>
+			
+			<!-- main content -->
+			<div id="left">
+               {% block content %}
+               {% endblock %}
+			</div>
+			
+			<!-- sidebar -->
+			<div id="right">
+				<h1>Category</h1>
+				{% for kategori in kategori_list %}
+                <p><h2><a href="">{{ kategori.nama }}</a></h2></p>
+                {% endfor %}
+			</div>
+			
+			<div class="x"></div>
+			<div class="break"></div>
+			
+			
+              {% block feature %}{% endblock %}
+
+		</div>
+		
+		<!-- footer -->
+		<div id="footer">
+			<p>Copyright &copy; 2008 - {% now "Y" %} <a href="http://web.o-leafs.com">O'leafs Web Developer</a> &middot; Design: Borut Jegrišnik, <a href="http://www.solucija.com/" title="Free CSS Templates">Solucija</a></p>
+		</div>
+	</div>
+	
+	<!-- gallery starter and prettyPhoto starter -->
+	<script type="text/javascript">
+		jGallery('pitch');
+		$(document).pngFix();
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});
+	</script>
+</body>
+</html>

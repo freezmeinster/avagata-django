@@ -31,7 +31,7 @@ h4 { font-size: 18px; font-weight: normal; float: left; margin: 3px 0 10px; widt
 		#logo h1 a span { color: #000; }
 #content { background: #fff; width: 980px; }
 	
-.menu { list-style:none; margin: 14px 25px 0 10px; width: 600px; float: left; }
+.menu { list-style:none; margin: 14px 25px 10px 10px; width: 700px; float: left; }
 	.menu li { float: left; margin: 0 4px 0 0; }
 	.menu li a { display: block; font-size: 14px; padding: 14px 24px; border: 1px solid #fff; }
 	.menu a:hover, .menu li.current a { border: 1px solid #ddd; }
@@ -71,7 +71,7 @@ ol { color: #666; margin: 5px 0 5px 30px; line-height: 18px; }
 	
 	#contact-back { margin: 12px 40px 0 0; float: right; }
 
-.post { position: relative; margin-bottom: 20px; height: 127px; }
+.post { position: relative; margin-bottom: 0px; height: 200px; }
 .post-options { position: relative; margin: -37px 0 40px 0; font-size: 10px; color: #666; }
 
 #right { width: 260px; float: right; border-left: 1px solid #ccc; padding-left: 36px; margin-right: 25px; display: inline; }
