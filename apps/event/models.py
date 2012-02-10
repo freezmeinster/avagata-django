@@ -5,6 +5,7 @@ class Event(models.Model):
     nama = models.CharField(max_length=200)
     tanggal = models.DateField()
     keterangan = models.TextField()
+    status = models.BooleanField()
     
     def __unicode__(self):
 	return self.nama
