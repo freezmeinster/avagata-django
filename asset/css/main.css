@@ -1,0 +1,91 @@
+/*
+	==========================================
+	project: DesignHQ 
+	author: Borut Jegrišnik (www.solucija.com)
+	------------------------------------------
+	2009. Solucija
+	==========================================
+*/
+
+*{ margin: 0; padding: 0; }
+
+:focus,:active { outline: 0; }
+body { font: 12px Tahoma, Arial, Sans-Serif; color: #000; background: #ccc; }
+a { text-decoration: none; color: #000; }
+	a:hover { color: #000; }
+.x { clear: both; }
+
+p { line-height: 22px; margin: 0 0 22px; color:#666; }
+img { border: 0; }
+
+h1 { font-size: 24px; font-weight: normal; margin-bottom: 15px;}
+h2 { font-size: 14px; font-weight: normal; margin-bottom: 2px; color: #333; }
+h3 { font-size: 14px; font-weight: bolder; margin-bottom: 10px; color: #333; }
+h4 { font-size: 18px; font-weight: normal; float: left; margin: 3px 0 10px; width: 460px; }
+
+#wrapper { margin: 0 auto; width: 980px; background: url(../images/bg.jpg) no-repeat; }
+
+#logo { padding: 20px 12px 10px; }
+	#logo h1 { font: bold 24px Arial; text-shadow: 1px 1px 1px #fff; letter-spacing: 4px; }
+		#logo h1 a { color: #333; }
+		#logo h1 a span { color: #000; }
+#content { background: #fff; width: 980px; }
+	
+.menu { list-style:none; margin: 14px 25px 0 10px; width: 600px; float: left; }
+	.menu li { float: left; margin: 0 4px 0 0; }
+	.menu li a { display: block; font-size: 14px; padding: 14px 24px; border: 1px solid #fff; }
+	.menu a:hover, .menu li.current a { border: 1px solid #ddd; }
+
+		.menu li ul { display: block; background: #fff; margin: -1px 0 0; position: absolute; display: none; z-index: 2; border: 1px solid #ddd; }
+		.menu li ul li { float: none; display: inline; margin: 0; padding: 0; }
+		.menu li ul li a { width: auto; margin: 4px; white-space: nowrap; }
+
+#search { float: right; width: 275px; margin: 23px 18px; display: inline; }
+	#search .text { width: 227px; height: 16px; border: 1px solid #ddd; padding: 5px; float: left; color: #888; }
+	#search .submit { float: right; border: 0; background: #000 url(../images/search.gif) no-repeat center 8px; width: 32px; height: 28px; padding-top: 1px; }
+
+#pitch { margin-bottom: 30px; }
+	#pitch .infoline { margin-top: -70px; padding: 25px 0 25px 25px; background: #000; font-size: 18px; width: 955px; height: 18px; opacity:0.70; filter:alpha(opacity=70); color: #fff; }
+
+	.pitch-gallery { overflow: hidden; width: 980px; position: relative; }
+		.pitch-gallery-holder { width: 3920px; position: relative; top: 0; left: 0; }
+		.pitch-gallery-div { float: left; }
+		
+#left { width: 600px; float: left; margin-left: 25px; display: inline; }
+	#left img { float: left; margin: 5px 20px 2px 0; padding: 3px; border: 1px solid #ccc; }
+	#left form { padding-left: 45px; }
+	#left label { float: left; display: block; clear: both; padding: 3px 0; color: #666; font-weight: normal; width: 150px; }
+		#left .lcurrent { font-weight: bold; }
+	#left label img { vertical-align: middle; }
+	#left input.text, textarea, select { float: left; margin: 0 5px 10px 0; padding: 7px; width: 350px; border: 1px solid #ccc; }
+	#left textarea { height: 200px; }
+	#left select { width: 366px; }
+	#left input.radio {  }
+		#left input:focus { border-color:#aaa; }
+		#left textarea:focus { border-color: #aaa; }	
+	.error { font-size: 10px; color: #666; margin: 0 0 10px 150px; display: none; }
+	#left .submit { border: 0; background: #000; color: #fff; padding: 5px; float: left; margin-left: 150px; }
+	
+ul { color: #666; margin: 0 0 10px 30px; line-height: 18px; }
+ol { color: #666; margin: 5px 0 5px 30px; line-height: 18px; }
+	
+	#contact-back { margin: 12px 40px 0 0; float: right; }
+
+.post { position: relative; margin-bottom: 20px; height: 127px; }
+.post-options { position: relative; margin: -37px 0 40px 0; font-size: 10px; color: #666; }
+
+#right { width: 260px; float: right; border-left: 1px solid #ccc; padding-left: 36px; margin-right: 25px; display: inline; }
+	
+#feature { margin-left: 25px; padding-bottom: 10px; }
+	.small-post { float: left; width: 260px; margin-right: 75px; }
+		.small-post img { border: 1px solid #ccc; padding: 3px; margin-bottom: 10px; }
+	.last { margin-right: 0; }
+	#feature ul { margin-top: -11px; }
+	
+#footer { color: #666; font-size: 11px; margin: 20px 0 20px 10px; }
+
+.post-info { font-size: 11px; color: #999; }
+.read-more { background: url(../images/link.gif) no-repeat center left; padding-left: 13px; font-size: 10px; }
+.break { border-top: 1px solid #ccc; margin: 30px 0; display: block; }
+	.no-border { border: 0; }
+.space { margin-bottom: 20px; }

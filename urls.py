@@ -7,7 +7,11 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'blog.views.index', name='home'),
+    url(r'^landing/', 'blog.views.landing', name='landing'),
+    
     (r'^asset/(?P<path>.*)$', 'django.views.static.serve',
 	{'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
+    
     url(r'^admin/', include(admin.site.urls)),
+    
 )

@@ -17,6 +17,17 @@ class Post(models.Model):
     user = models.ForeignKey(User)
     kategori = models.ForeignKey("Kategori")
     
+    def get_status(self):
+	if self.status :
+	    return "Sudah Terbit"
+	else : 
+	    return "Belum Terbit"
+    get_status.short_description = "Status Terbit"
+    
+    def get_date(self):
+	return self.pub_date.strftime("%d %B  %Y")
+    get_date.short_description = "Tanggal Terbit"
+    
     def __unicode__(self):
 	return self.judul
    
