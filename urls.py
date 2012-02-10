@@ -7,6 +7,7 @@ urlpatterns = patterns('',
     url(r'^$', 'landing.views.home', name='home'),
     url(r'^landing/',  include('landing.urls')),
     url(r'^blog/',  include('blog.urls')),
+    url(r'^event/', include('event.urls')),
     
     (r'^asset/(?P<path>.*)$', 'django.views.static.serve',
 	{'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
