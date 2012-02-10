@@ -1,3 +1,11 @@
 from django.db import models
 
-# Create your models here.
+class LandingConfig(models.Model):
+    key = models.CharField(max_length=20)
+    value = models.CharField(max_length=20)
+    
+    class Meta:
+        verbose_name_plural = "Daftar Konfigurasi"
+    
+    def __unicode__(self):
+        return self.key
