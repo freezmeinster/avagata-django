@@ -72,6 +72,8 @@ SECRET_KEY = settings.SECRET_KEY
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = settings.TEMPLATE_LOADERS
 
+TEMPLATE_CONTEXT_PROCESSORS = settings.TEMPLATE_CONTEXT_PROCESSORS
+
 MIDDLEWARE_CLASSES = settings.MIDDLEWARE_CLASSES
 
 ROOT_URLCONF = settings.ROOT_URLCONF
