@@ -1,0 +1,17 @@
+{% extends 'base_blog.html' %}
+
+{% block content %}
+            <h1><a href="#">{{ post.judul|title }}</a></h1>
+            <p>
+            {{ post.konten }}
+            </p>
+            <a href="/blog" class="read-more">Go back</a>    
+{% endblock %}
+
+{% block post_info %}
+<h1>Post Info</h1>
+<p>
+Posted by : {{ post.user.get_full_name }}</p>
+<p>Publish Date : {{ post.pub_date }}  
+<p>Category : {{ post.kategori }}</p> 
+{% endblock %}
