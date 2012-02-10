@@ -4,6 +4,7 @@ from django.db import models
 class Event(models.Model):
     nama = models.CharField(max_length=200)
     tanggal = models.DateField()
+    tempat = models.CharField(max_length=200)
     keterangan = models.TextField()
     status = models.BooleanField()
     
