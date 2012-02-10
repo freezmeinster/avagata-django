@@ -62,6 +62,9 @@
 				{% for kategori in kategori_list %}
                 <p><h2><a href="">{{ kategori.nama }}</a></h2></p>
                 {% endfor %}
+                
+                {% block post_info %}
+                {% endblock %}
 			</div>
 			
 			<div class="x"></div>

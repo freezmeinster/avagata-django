@@ -10,5 +10,8 @@ def index(request):
         'posting' : list_post, 
         },context_instance=RequestContext(request))
     
-def read(request):
-    pass
+def read(request,post_id):
+    post = Post.objects.get(id=post_id)
+    return render_to_response("blog/read.html",{
+        'post' : post,
+    },context_instance=RequestContext(request))

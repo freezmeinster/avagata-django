@@ -3,7 +3,7 @@
 {% block content %}
                 {% for post in posting %}
                 <div class="post">
-                      <h4><a href="inner.html">{{ post.judul|title }}</a></h4>
+                      <h4><a href="{% url blog_read post.id %}">{{ post.judul|title }}</a></h4>
                       <div class="x"></div>
                       <p>Posted on {{ post.pub_date|timesince }} ago. by <a href="">{{ post.user.get_full_name }}</a>
                        | under <a href="">{{ post.kategori }}</a></p>
@@ -11,7 +11,7 @@
                 </div>
                 <div class="post-options"> 
                  {% if post.konten|length >= 200 %}
-                    <a href="" class="read-more">Read more</a> {% endif %}
+                    <a href="{% url blog_read post.id %}" class="read-more">Read more</a> {% endif %}
                 </div>
                 <div class="x"></div>
                 {% endfor %}
