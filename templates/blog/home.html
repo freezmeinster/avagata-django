@@ -17,17 +17,5 @@
                          </div>
                       </div>
 		{% endfor %}
-		<div align="center" class="clearpagination"><span class="pagination"><span class="inner"><a class="page_prev" href="#">&nbsp;</a><a href="#">1</a><a class="page_current" href="#">2</a><a href="#">3</a><a href="#">4</a><a class="page_next" href="#">&nbsp;</a></span></span></div>   
-		 {% if posting.has_previous %}
-                                            <a href="?page={{ musics.previous_page_number }}"><div class="paginate_enabled_previous" ></div></a>
-                                            {% else %}
-                                            <div class="paginate_disabled_previous" >
-                                            </div>
-                                            {% endif %}
-                                            
-                                            {% if posting.has_next %}
-                                            <a href="?page={{ musics.next_page_number }}"><div class="paginate_enabled_next" ></div></a>
-                                            {% else %}
-                                            <div class="paginate_disabled_next"></div>
-                                            {% endif %}                     
+		<div align="center" class="clearpagination"><span class="pagination"><span class="inner"><a class="page_prev" href="#">&nbsp;</a><a href="#">1</a><a class="page_current" href="#">2</a><a href="#">3</a><a href="#">4</a><a class="page_next" href="#">&nbsp;</a></span></span></div>                      
 {% endblock %} 
