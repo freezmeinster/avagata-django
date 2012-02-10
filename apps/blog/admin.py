@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.models import Kategori, Post, Event
+from blog.models import Kategori, Post
 
 class PostAdmin(admin.ModelAdmin):
     search_fields = ('judul','konten')
@@ -8,4 +8,3 @@ class PostAdmin(admin.ModelAdmin):
     
 admin.site.register(Kategori) 
 admin.site.register(Post, PostAdmin)
-admin.site.register(Event)
