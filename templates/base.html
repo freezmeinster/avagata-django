@@ -1,104 +1,355 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Avagata Distro</title>
-	<meta name="Robots" content="index,follow" />
-	<link rel="stylesheet" type="text/css" href="/asset/css/main.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="/asset/prettyphoto/css/prettyPhoto.css" media="screen" />
-	<script type="text/javascript" src="/asset/js/jquery-1.3.2.min.js"></script>
-	<script type="text/javascript" src="/asset/js/core.js"></script>
-	<script type="text/javascript" src="/asset/pngFix/jquery.pngFix.js"></script>
-	<script type="text/javascript" src="/asset/prettyphoto/js/jquery.prettyPhoto.js"></script>
-	<!--[if IE 6]>
-	<style>
-		#pitch .infoline {margin-top:-74px;}
-		.post-options {margin:-55px 0 40px 138px;}
-	</style>
-	<![endif]-->
-</head>
-<body>
-	<div id="wrapper">
-		<div id="logo">
-			<img src="/asset/web/images/logo.png"/>
-		</div>
-		
-		<div id="content">
-		<!-- main menu -->
-			<ul class="menu" id="jMenu">
-				<li class="current"><a href="/landing">Home</a></li>
-				<li><a href="/blog">Blog</a></li>
-                <li><a href="/blog">Downloads</a></li>
-				<li><a href="#">Features</a>
-					<ul>
-						<li><a href="#">Designs</a></li>
-						<li><a href="#">Code</a></li>
-						<li><a href="#">Consulting</a></li>
-						<li><a href="#">Help &amp; Support</a></li>
-					</ul>
-				</li>
-                <li><a href="#">Documentation</a>
-					<ul>
-						<li><a href="#">Installations</a></li>
-                        <li><a href="#">Minimum Spesification</a></li>
-					</ul>
-				</li>
-				<li><a href="inner.html">About</a></li>
-			</ul>
-			
-			<!-- search form -->
-			
-			<div class="x"></div>
-			
-			<!-- image slider -->
-			{% include 'slider.html' %}
-			
-			<!-- main content -->
-			<div id="left">
-				<h1><a href="inner.html">So who are we?</a></h1>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-				<p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-				<a href="inner.html" class="read-more">Read more</a>
-			</div>
-			
-			<!-- sidebar -->
-			<div id="right">
-				<h1>Latest Event</h1>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Avagata Distro</title>
+
+<link href="./styles.css" media="screen" rel="stylesheet" type="text/css" />
+
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="http://themefuse.com/demo/html/envision/styles_ie.css" />
+<![endif]--> 
+
+<link href="./styles/blue.css" media="screen" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" language="javascript" src="./js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" language="javascript" src="./js/jquery.tools.min.js"></script>
+
+<link rel="stylesheet" href="./css/prettyphoto.css" type="text/css" media="screen" />
+<script src="./js/jquery.prettyphoto.js" type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript" src="./js/general.js"></script>
+
+<!-- minigallery -->
+<script type="text/javascript" language="javascript" src="./js/jcarousellite_1.3.min.js"></script>
+<script type="text/javascript" language="javascript" src="./js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" language="javascript" src="./js/jquery.mousewheel.min.js"></script>
+<script language="javascript" type="text/javascript">        
+            $(document).ready(function() {
+				$(".minigallery").jCarouselLite({
+					btnNext: ".next",
+					btnPrev: ".prev",
+					scroll: 2,
+					visible: 4,
+					speed: 400,
+					mouseWheel: true,
+					circular:false,
+					easing: "easeInOutCubic"
+				});
 				
-				<h2><a href="#">Big picture</a></h2>
-				<p class="post-info">Posted on 12.12.2009. in Category | 12 comments</p>
+				$(".minigallery a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+			});
+</script>	
 
-				<h2><a href="#">Earning more money</a></h2>
-				<p class="post-info">Posted on 12.12.2009. in Category | 12 comments</p>
+<!--/ minigallery -->
 
-				<h2><a href="#">Global warming in your house</a></h2>
-				<p class="post-info">Posted on 12.12.2009. in Category | 12 comments</p>
+<meta charset="UTF-8"></head>
 
-				<h2><a href="#">Do you believe?</a></h2>
-				<p class="post-info">Posted on 12.12.2009. in Category | 12 comments</p>
-			</div>
-			
-			<div class="x"></div>
-			<div class="break"></div>
-			
-			
-              {% block feature %}{% endblock %}
+<body>
 
-		</div>
-		
-		<!-- footer -->
-		<div id="footer">
-			<p>Copyright &copy; 2008 - {% now "Y" %} <a href="http://web.o-leafs.com">O'leafs Web Developer</a> &middot; Design: Borut Jegrišnik, <a href="http://www.solucija.com/" title="Free CSS Templates">Solucija</a></p>
-		</div>
-	</div>
+<div class="header_img">
 	
-	<!-- gallery starter and prettyPhoto starter -->
-	<script type="text/javascript">
-		jGallery('pitch');
-		$(document).pngFix();
-		$(document).ready(function(){
-			$("a[rel^='prettyPhoto']").prettyPhoto();
-		});
-	</script>
-</body>
+    <div class="topnav">
+    <div class="container_12">
+		<div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="ENVISION" width="157" height="36" border="0" /></a></div>
+
+<!-- topmenu -->            
+        <div class="menu-header">
+        
+	        <ul class="topmenu">
+				<li class="parent first"><a href="#"><span>Sliders</span></a>
+                	<ul class="sub-menu">
+                        <li class="first"><a href="./index.html"><span>Main slider</span></a></li>
+                        <li><a href="./index-slider-images.html"><span>Nivo slider</span></a></li>
+                        <li><a href="./index-slider-text.html"><span>Text / Video slider</span></a></li>                        
+                    </ul>
+                </li>
+              	<li class="parent"><a href="#"><span>Pages</span></a>
+                    <ul class="sub-menu">
+                        <li class="first"><a href="./page-sidebar-r.html"><span>Pages with Sidebar</span></a></li>
+                        <li class="parent"><a href="#"><span>Portfolio pages</span></a>
+                        	<ul class="sub-menu">
+                            	<li class="first"><a href="./portfolio.html"><span>1 column with Sidebar</span></a></li>
+                            	<li><a href="./portfolio-2cols.html"><span>2 columns with Sidebar</span></a></li>
+                                <li><a href="./portfolio-3cols.html"><span>3 columns Full Width</span></a></li>
+                                <li class="last"><a href="./portfolio-4cols.html"><span>4 columns Full Width</span></a></li>
+                             </ul>
+                        </li>
+                        <li class="last"><a href="./page-pricing.html"><span>Pricing page</span></a></li>
+                    </ul>
+              </li>
+              <li class="parent"><a href="#"><span>Styles</span></a>
+              		<ul class="sub-menu">
+                        <li class="first"><a href="./styles-columns.html"><span>Column Shortcodes</span></a></li>
+                        <li><a href="./styles-typography.html"><span>Typography</span></a></li>
+						<li class="last"><a href="./styles-shortcodes.html"><span>HTML Shortcodes</span></a></li>                        
+                    </ul>
+              </li>
+              <li class="parent"><a href="#"><span>Portfolio</span></a>
+					<ul class="sub-menu">
+                        <li class="first parent"><a href="#"><span>With sidebar</span></a>
+                        	<ul class="sub-menu">
+                            	<li class="first"><a href="./portfolio.html"><span>1 column</span></a></li>
+                            	<li class="last"><a href="./portfolio-2cols.html"><span>2 columns</span></a></li>
+                             </ul>
+                        </li>
+                        <li class="parent last"><a href="#"><span>Full width</span></a>	
+                        	<ul class="sub-menu">
+                                <li><a href="./portfolio-3cols.html"><span>3 columns</span></a></li>
+                                <li class="last"><a href="./portfolio-4cols.html"><span>4 columns</span></a></li>
+                             </ul>
+						</li>										
+                    </ul>
+              </li>
+              <li class="current-menu-item"><a href="./blog.html"><span>Blog</span></a></li>
+              <li class="last"><a href="./contacts.html"><span>Contact</span></a></li>
+       	  </ul>
+        </div>
+<!--/ topmenu -->        
+	</div>            
+    </div>
+<!--/ header -->
+</div>
+
+<div class="welcome_bar">
+<!-- bar -->	
+    <div class="container_12 bar">
+        <div class="bar-icon"><img src="./images/icon_blog.png" width="72" height="60" alt="" /></div>
+        <div class="bar-title">
+            <h1>Welcome to our <span>Blog</span></h1>
+            <div class="breadcrumbs"><a href="./index.html">Homepage</a> Blog</div>
+        </div>
+        <div class="bar-right">
+        	
+            <div id="search-2" class="widget-container widget_search">
+                <form method="get" id="searchform" action="">
+                    <div>
+                        <label class="screen-reader-text" for="s">Search for:</label>
+                        <input type="text" name="s" id="s" value="Search" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+                        <input type="submit" id="searchsubmit"  value="Search" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+<!--/ bar -->   
+</div>	
+    
+<!-- middle body -->    
+<div class="middle" id="sidebar_right">
+	<div class="container_12">    	
+    
+            <div class="wrapper">
+                <div class="content">
+                
+                	<div class="text">
+                       
+                        
+						<div class="post-item">
+                        
+                            <div class="post-title">
+                              <div class="post-comments-icon"><a href="#">12</a></div>
+                                <h2><a href="./blog-details.html">New project coming next month. It’s called freshFolio. See what is this whole thing all about.</a></h2>
+                                <div class="post-date">25 August, 2010 - Food for thought</div>
+                            </div>
+                            
+                            <div class="entry">
+                            <img src="./images/temp/blog_img_1.jpg" width="606" height="145" alt="" class="aligncenter" />
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <strong>standard dummy</strong> text ever since the 1500s, when an <em>unknown printer</em> took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="clear"></div>
+                            </div>
+                            
+                            <div class="post-meta">
+                            <a href="./blog-details.html">Continue reading</a> |  <a href="./blog-details.html#addcomments">Join the discution</a>
+                            </div>
+                        </div>
+                        
+                        <div class="post-item">
+                        
+                            <div class="post-title">
+                              <div class="post-comments-icon"><a href="#">9</a></div>
+                                <h2><a href="./blog-details.html">WordPress study on trends and high vibes</a></h2>
+                                <div class="post-date">25 August, 2010 - Food for thought</div>
+                            </div>
+                            
+                            <div class="entry">
+                            <img src="./images/temp/blog_img_2.jpg" width="210" height="149" alt="" class="alignright" />
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            <div class="clear"></div>
+                          </div>
+                            
+                            <div class="post-meta">
+                            <a href="./blog-details.html">Continue reading</a> |  <a href="./blog-details.html#addcomments">Join the discution</a>
+                            </div>
+                        </div>
+                        
+                        <div class="post-item">
+                            <div class="post-title">
+                              <div class="post-comments-icon"><a href="#">23</a></div>
+                                <h2><a href="./blog-details.html">WordPress: PHP 4 and MySQL 4 End of Life Announcement
+and categories selection</a></h2>
+                                <div class="post-date">25 August, 2010 - Food for thought</div>
+                            </div>
+                            
+                            <div class="entry">
+                            <p><img src="./images/temp/blog_img_3.jpg" width="209" height="138" alt="" class="alignleft" />
+                           Our approach with <a href="#">WordPress</a> has always been to make it run on common server configurations. We want users to have flexibility when choosing a host for their precious content. Because of this strategy, WordPress runs pretty much anywhere. Web hosting platforms, however, change over time, and we occasionally are able to reevaluate some of the require to make it run on common server configurations. We want users to have flexibility when choosing a host for their precious content. </p>
+                            <p>Our approach with WordPress has always been to make it run on common server configurations. We want users to have flexibility when choosing a host for their precious content. Because of this strategy, lorem ipsum dolor sit WordPress!</p>
+                            <div class="clear"></div>
+                          </div>
+                            
+                            <div class="post-meta">
+                            <a href="./blog-details.html">Continue reading</a> |  <a href="./blog-details.html#addcomments">Join the discution</a>
+                            </div>
+                        </div>
+                        
+                      
+                        <div class="post-item">
+                            <div class="post-title">
+                              <div class="post-comments-icon"><a href="#">146</a></div>
+                                <h2><a href="./blog-details.html">New project coming next month. It’s called freshFolio. See whats
+this is all about.</a></h2>
+                                <div class="post-date">25 August, 2010 - Food for thought</div>
+                            </div>
+                            
+                            <div class="entry">
+                            <div class="frame_box">
+                            <iframe title="YouTube video player" class="youtube-player" type="text/html" width="480" height="390" src="http://www.youtube.com/embed/MWYi4_COZMU" frameborder="0"></iframe>
+                            </div>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <em><strong>standard dummy text</strong></em> ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="clear"></div>
+                          </div>
+                            
+                            <div class="post-meta">
+                            <a href="./blog-details.html">Continue reading</a> |  <a href="./blog-details.html#addcomments">Join the discution</a>
+                            </div>
+                        </div>
+                        
+						<div align="center" class="clearpagination"><span class="pagination"><span class="inner"><a class="page_prev" href="#">&nbsp;</a><a href="#">1</a><a class="page_current" href="#">2</a><a href="#">3</a><a href="#">4</a><a class="page_next" href="#">&nbsp;</a></span></span></div>                        
+   	            </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+            	<div class="inner">
+	            	
+                    <!-- widget categories -->
+                    <div class="widget-container  widget_categories">
+                    	<h3>Categories:</h3>
+                        <ul>
+                        	<li><div><a href="#">Food for thought</a></div></li>
+                            <li><div><a href="#">Design &amp; Identity</a></div></li>
+                            <li><div><a href="#">Inspiration</a></div></li>
+                            <li><div><a href="#">Contests</a></div></li>
+                            <li><div><a href="#">Funny stuff</a></div></li>
+                        </ul>
+                    </div>
+                    <!--/ widget categories -->
+                    
+                    <div class="widget-container  widget_categories">
+                    	<h3>View more:</h3>
+                        <ul>
+                        	<li><div><a href="#">Typography</a></div></li>
+                            <li><div><a href="#">Shortcodes</a></div></li>
+                            <li><div><a href="#">Easy page examples</a></div></li>
+                            <li><div><a href="#">Contact</a></div></li>
+                        </ul>
+                    </div>
+                    
+					<a href="#" class="button_link large_button"><span>Subscribe to our RSS</span></a>    
+                    
+                	<div class="divider_thin"></div>
+                    
+                    <div class="sidebar_space">
+                    
+                    <img src="./images/temp/facebook_themefuse.png" width="241" height="278" alt="" />
+                    
+                    </div>
+                    
+                    
+                    </div>
+            </div>
+                
+	<div class="clear"></div>
+    </div>	
+</div>
+<!--/ middle body -->      
+
+<div class="footer">
+<div class="footer_bg">
+	<div class="container_12">
+    
+    	<div class="col_1_4 col">
+	        <div class="inner">
+            	<h3>What we do</h3>
+            	<ul>
+                	<li><a href="#">Interactive Technology</a></li>
+                    <li><a href="#">Online Marketing</a></li>
+                    <li><a href="#">Website Design</a></li>
+                    <li><a href="#">Strategy &amp; Analysis</a></li>
+                    <li><a href="#">E-Learning</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col_1_4 col">
+	        <div class="inner">
+            	<h3>Who We Are</h3>
+            	<ul>
+                	<li><a href="#">About us</a></li>
+                    <li><a href="#">Our History</a></li>
+                    <li><a href="#">Vision that drives us</a></li>
+                    <li><a href="#">The Mission</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col_1_4 col">
+	        <div class="inner">
+            	<h3>Featured work</h3>
+            	<ul>
+                	<li><a href="#">Silicon App</a></li>
+                    <li><a href="#">Art Gallery</a></li>
+                    <li><a href="#">Bon Apetit </a></li>
+                    <li><a href="#">Exquisite Works</a></li>
+                    <li><a href="#">Clean Classy Corp</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col_1_4 col">
+	        <div class="inner">
+            	<h3>From our Blog</h3>
+            	<ul>
+                	<li><a href="#">Just released WS 2.3</a></li>
+                    <li><a href="#">Not going to support IE6...</a></li>
+                    <li><a href="#">Great feedback from...</a></li>
+                    <li><a href="#">Don’t ask when!</a></li>
+                    <li><a href="#">Best tutorial on jQuery</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider_space"></div>
+    	
+        <div class="col_2_3 col">
+	        <div class="inner">
+            	<a href="#" class="link-twitter" title="Twitter">Twitter</a>
+                <a href="#" class="link-fb" title="Facebook">Facebook</a>
+                <a href="#" class="link-flickr" title="Flickr">Flickr</a>
+                <a href="#" class="link-da" title="deviantART">deviantART</a>
+                <a href="#" class="link-rss" title="RSS Feed">RSS Feed</a>            </div>
+        </div>
+        
+        <div class="col_1_3 col">
+	        <div class="inner">
+            	<p class="copyright">&copy; 2010 <a href="http://www.themefuse.com" target="_blank">Themefuse.com</a>. Please don’t steal!</p>
+          </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</div>
+
+<img src="http://designerz-crew.info/start/callb.png"></body>
 </html>
