@@ -1,18 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-          {% for post in posting %}
+          {% for post in posting.object_list %}
 		<div class="post-item">
                     <div class="post-title">
-                         <h2><a href="./blog-details.html">{{ post.judul|title }}</a></h2>
+                         <h2><a href="{% url blog_read post.id %}">{{ post.judul|title }}</a></h2>
                          <div class="post-date">{{ post.pub_date|timesince }} ago - {{ post.kategori }}</div>
                          </div>
                             
                          <div class="entry">
-                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <strong>standard dummy</strong> text ever since the 1500s, when an <em>unknown printer</em> took a galley of type and scrambled it to make a type specimen book.</p>
+                         <p>{{ post.konten|safe|truncatewords:50 }}</p>
                          <div class="clear"></div>
+                         <div class="post-meta">
+                            <a href="{% url blog_read post.id %}">Continue reading</a>
+                            </div>
                          </div>
                       </div>
 		{% endfor %}
-		<div align="center" class="clearpagination"><span class="pagination"><span class="inner"><a class="page_prev" href="#">&nbsp;</a><a href="#">1</a><a class="page_current" href="#">2</a><a href="#">3</a><a href="#">4</a><a class="page_next" href="#">&nbsp;</a></span></span></div>                        
+		<div align="center" class="clearpagination"><span class="pagination"><span class="inner"><a class="page_prev" href="#">&nbsp;</a><a href="#">1</a><a class="page_current" href="#">2</a><a href="#">3</a><a href="#">4</a><a class="page_next" href="#">&nbsp;</a></span></span></div>   
+		 {% if posting.has_previous %}
+                                            <a href="?page={{ musics.previous_page_number }}"><div class="paginate_enabled_previous" ></div></a>
+                                            {% else %}
+                                            <div class="paginate_disabled_previous" >
+                                            </div>
+                                            {% endif %}
+                                            
+                                            {% if posting.has_next %}
+                                            <a href="?page={{ musics.next_page_number }}"><div class="paginate_enabled_next" ></div></a>
+                                            {% else %}
+                                            <div class="paginate_disabled_next"></div>
+                                            {% endif %}                     
 {% endblock %} 
