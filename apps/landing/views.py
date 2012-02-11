@@ -1,5 +1,7 @@
 from django.shortcuts import render_to_response,redirect
-from landing.models import LandingConfig
+from django.template import RequestContext
+from landing.models import LandingConfig,Testimoni
+from random import randint
 
 def home(request):
     l_config = LandingConfig.objects.get(key='under_maintenance')
@@ -9,7 +11,12 @@ def home(request):
         return redirect('/landing')
     
 def index(request):
-    return render_to_response('landing/home.html')
+    c_testis = Testimoni.objects.count()
+    t_id = randint(1,c_testis)
+    testis = Testimoni.objects.get(id=t_id)
+    return render_to_response('landing/home.html',{
+	'testimoni' : testis,
+	},context_instance=RequestContext(request))
 
 def static(request):
     return render_to_response('index.html')

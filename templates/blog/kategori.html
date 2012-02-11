@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block breadcrumbs %}
-    <h1>Welcome to Avagata <span>Blog</span></h1>
-    <div class="breadcrumbs"><a href="{% url home %}">Homepage</a> Blog</div>
+    <h1>Category <span>{{ kategori.nama }}</span></h1>
+    <div class="breadcrumbs"><a href="{% url blog_index %}">Blog</a> {{ kategori.nama }} Category</div>
 {% endblock %}
 
 {% block content %}
