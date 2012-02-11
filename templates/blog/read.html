@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
+{% block breadcrumbs %}
+    <h1>Reading <span>{{ post.judul|title }}</span></h1>
+    <div class="breadcrumbs"><a href="{% url blog_index %}">Blog</a>{{ post.judul }}</div>
+{% endblock %}
+
 {% block content %}
 		<div class="post-item">
                     <div class="post-title">
