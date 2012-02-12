@@ -101,7 +101,10 @@ TEMPLATE_LOADERS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
-    'libs.request_context.kategori_list'
+    'libs.request_context.kategori_list',
+    'libs.request_context.feature_list',
+    'libs.request_context.up_coming_event',
+    'libs.request_context.now_event'
 )
 
 MIDDLEWARE_CLASSES = (
