@@ -12,8 +12,11 @@ def home(request):
     
 def index(request):
     c_testis = Testimoni.objects.count()
-    t_id = randint(1,c_testis)
-    testis = Testimoni.objects.get(id=t_id)
+    if c_testis != 0 :
+        t_id = randint(1,c_testis)
+        testis = Testimoni.objects.get(id=t_id)
+    else : 
+        testis = None
     return render_to_response('landing/home.html',{
 	'testimoni' : testis,
 	},context_instance=RequestContext(request))

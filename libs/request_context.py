@@ -8,8 +8,12 @@ def kategori_list(request):
     return { 'kategori_list' : l_kategori }
 
 def feature_list(request):
-    kate = Kategori.objects.get(nama="feature")
-    f_list = HalamanStatis.objects.filter(kategori=kate.id)
+    try :
+        kate = Kategori.objects.get(nama="feature")
+        f_list = HalamanStatis.objects.filter(kategori=kate.id)
+    except :
+        f_list = None
+    
     return { 'feature_list' : f_list }
     
 def now_event(request):
