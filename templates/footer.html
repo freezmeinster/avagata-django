@@ -1,4 +1,4 @@
-   
+{% load i18n %}   
 <div class="footer">
 <div class="footer_bg">
 	<div class="container_12">
@@ -8,17 +8,17 @@
         
         <div class="col_1_4 col">
           <div class="inner">
-            	<h3>This site Powered by</h3>
+            	<h3>{% trans 'This Site Powered By' %}</h3>
             	<ul>
 		    <li><a target="_blank" href="https://www.djangoproject.com/">Django, Python Web Framework</a></li>
 		    <li><a target="_blank" href="http://git-scm.com/">Git, Source Code Management</a></li>
-		    <li><a target="_blank" href="http://git-scm.com/">jQuery, Javascript Framework</a></li>
+		    <li><a target="_blank" href="http://jquery.com/">jQuery, Javascript Framework</a></li>
                 </ul>
             </div>
         </div>
 	<div class="col_1_4 col">
           <div class="inner">
-            	<h3>Now Event</h3>
+            	<h3>{% trans 'Now Event' %}</h3>
             	<ul>
 		    {% for event in now_event %}
 		    <li><a target="_blank" href="">{{ event.nama }}</a></li>
@@ -28,7 +28,7 @@
         </div>
 	<div class="col_1_4 col">
           <div class="inner">
-            	<h3>Up Coming Event</h3>
+            	<h3>{% trans 'Up Coming Event' %}</h3>
             	<ul>
 		    {% for event in up_coming_event %}
 		    <li><a target="_blank" href="">{{ event.nama }}</a></li>

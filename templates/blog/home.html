@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block breadcrumbs %}
-    <h1>Welcome to Avagata <span>Blog</span></h1>
-    <div class="breadcrumbs"><a href="{% url home %}">Homepage</a> Blog</div>
+    <h1>{% trans 'Welcome to' %} Avagata <span>{% trans 'Blog' %}</span></h1>
+    <div class="breadcrumbs"><a href="{% url home %}">{% trans 'Homepage' %}</a> {% trans 'Blog' %}</div>
 {% endblock %}
 
 {% block content %}
@@ -10,14 +11,14 @@
 		<div class="post-item">
                     <div class="post-title">
                          <h2><a href="{% url blog_read post.id %}">{{ post.judul|title }}</a></h2>
-                         <div class="post-date">{{ post.pub_date|timesince }} ago - {{ post.kategori }}</div>
+                         <div class="post-date">{{ post.pub_date|timesince }} {% trans 'ago' %} - {{ post.kategori }}</div>
                          </div>
                             
                          <div class="entry">
                          <p>{{ post.konten|safe|truncatewords:50 }}</p>
                          <div class="clear"></div>
                          <div class="post-meta">
-                            <a href="{% url blog_read post.id %}">Continue reading</a>
+                            <a href="{% url blog_read post.id %}">{% trans 'Continue reading' %}</a>
                             </div>
                          </div>
                       </div>

@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -57,19 +58,19 @@
         <div class="menu-header">
         
 	        <ul class="topmenu">
-		<li class="menu-item"><a href="{% url home %}"><span>Home</span></a></li>
-                <li class="menu-item"><a href="{% url blog_index %}"><span>Blog</span></a></li>
-              	<li class="parent"><a href="#"><span>Documentation</span></a>
+		<li class="menu-item"><a href="{% url home %}"><span>{% trans 'Home' %}</span></a></li>
+                <li class="menu-item"><a href="{% url blog_index %}"><span>{% trans 'Blog' %}</span></a></li>
+              	<li class="parent"><a href="#"><span>{% trans 'Documentation' %}</span></a>
                     <ul class="sub-menu">
-                        <li class="first"><a href="#"><span>Installation</span></a></li>
-                        <li class="menu-item"><a href="#"><span>Minimal Specification</span></a></li>
+                        <li class="first"><a href="#"><span>{% trans 'Installation' %}</span></a></li>
+                        <li class="menu-item"><a href="#"><span>{% trans 'Minimal Specification' %}</span></a></li>
                         <li class="last"><a href="#"><span>FAQ</span></a></li>
                     </ul>
               </li>
-	     <li class="menu-item"><a href="#"><span>Downloads</span></a></li>
-	     <li class="menu-item"><a href="#"><span>Screenshot</span></a></li>
+	     <li class="menu-item"><a href="#"><span>{% trans 'Download' %}</span></a></li>
+	     <li class="menu-item"><a href="#"><span>{% trans 'Screenshot' %}</span></a></li>
              
-              <li class="last"><a href="#"><span>About us</span></a></li>
+              <li class="last"><a href="#"><span>{% trans 'About us' %}</span></a></li>
        	  </ul>
         </div>
 <!--/ topmenu -->        

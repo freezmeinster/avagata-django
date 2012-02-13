@@ -1,5 +1,5 @@
 {% include "header.html" %}
-
+{% load i18n %}
 <div class="welcome_bar">
 <!-- bar -->	
     <div class="container_12 bar">
@@ -43,7 +43,7 @@
 	            	
                     <!-- widget categories -->
                     <div class="widget-container  widget_categories">
-                    	<h3>Categories:</h3>
+                    	<h3>{%trans 'Categories' %}:</h3>
                         <ul>
 			    {% for kategori in kategori_list %}
                             <li><div><a href="{% url kategori_index kategori.id %}">{{ kategori.nama }}</a></div></li>

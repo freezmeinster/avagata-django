@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block breadcrumbs %}
-    <h1>Reading <span>{{ post.judul|title }}</span></h1>
-    <div class="breadcrumbs"><a href="{% url blog_index %}">Blog</a>{{ post.judul }}</div>
+    <h1>{% trans 'Reading' %} <span>{{ post.judul|title }}</span></h1>
+    <div class="breadcrumbs"><a href="{% url blog_index %}">{% trans 'Blog' %}</a>{{ post.judul }}</div>
 {% endblock %}
 
 {% block content %}
