@@ -1,6 +1,7 @@
 import datetime
 from blog.models import Kategori
-from landing.models import HalamanStatis,Kategori
+from landing.models import HalamanStatis
+from landing.models import Kategori as LandingKategori
 from event.models import Event
 
 def kategori_list(request):
@@ -9,7 +10,7 @@ def kategori_list(request):
 
 def feature_list(request):
     try :
-        kate = Kategori.objects.get(nama="feature")
+        kate = LandingKategori.objects.get(nama="feature")
         f_list = HalamanStatis.objects.filter(kategori=kate.id)
     except :
         f_list = None
