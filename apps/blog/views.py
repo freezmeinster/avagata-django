@@ -5,7 +5,7 @@ from blog.models import Post,Kategori
 from landing.models import LandingConfig
 
 def index(request):
-    posts = Post.objects.filter(status=True)
+    posts = Post.objects.filter(status=True).order_by('pub_date').reverse()
     paginator = Paginator(posts, 10) 
     page = request.GET.get('page')
     if page == None :
