@@ -1,7 +1,7 @@
 from django.db import models
 
 class Media(models.Model):
-    media = models.FileField(upload_to='upload_data')
+    media = models.FileField()
     
     class Meta :
 	verbose_name_plural = "Daftar Media"
