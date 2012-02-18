@@ -29,3 +29,21 @@ def read_feature(request,feature_id):
     return render_to_response('landing/read.html',{
 	'halaman' : halaman,
 	},context_instance=RequestContext(request))
+
+def about_us(request):
+  try :
+    about_us=HalamanStatis.objects.get(kategori__nama='About')
+  except :
+    about_us=None
+  return render_to_response('landing/about_us.html',{
+    'about_us':about_us,
+    }, context_instance=RequestContext(request))
+    
+def download(request):
+  try :
+    download=HalamanStatis.objects.get(kategori__nama='Download')
+  except :
+    download=None
+  return render_to_response('landing/download.html',{
+    'download':download,
+    }, context_instance=RequestContext(request))
