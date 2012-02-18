@@ -4,3 +4,6 @@ from landing.models import LandingConfig,Testimoni
 from random import randint
 from doc.models import Media, KategoriHalaman, HalamanDoc
 
+def install(request):
+  
+  
