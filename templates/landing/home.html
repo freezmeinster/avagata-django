@@ -27,7 +27,7 @@
     	<div class="inner">
 	  <h2>{{ feature.judul|title }}</h2>
 	     <p>{{ feature.konten|safe|truncatewords:15 }}</p>
-        <a href="#" class="link-more">{% trans 'more details' %}</a>
+        <a href="{% url landing_read_feature feature.id %}" class="link-more">{% trans 'more details' %}</a>
 	</div>
      </div>
     {% endfor %}

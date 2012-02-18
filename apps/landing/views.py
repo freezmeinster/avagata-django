@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response,redirect
 from django.template import RequestContext
-from landing.models import LandingConfig,Testimoni
+from landing.models import LandingConfig,Testimoni,HalamanStatis
 from random import randint
 
 def home(request):
@@ -23,3 +23,9 @@ def index(request):
 
 def static(request):
     return render_to_response('index.html')
+
+def read_feature(request,feature_id):
+    halaman = HalamanStatis.objects.get(id=feature_id)
+    return render_to_response('landing/read.html',{
+	'halaman' : halaman,
+	},context_instance=RequestContext(request))

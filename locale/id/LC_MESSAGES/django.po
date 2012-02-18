@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-13 23:20+0000\n"
+"POT-Creation-Date: 2012-02-19 06:03+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,23 +20,23 @@ msgstr ""
 
 #: templates/base.html:46
 msgid "Categories"
-msgstr "Daftar Kategori"
+msgstr ""
 
 #: templates/footer.html:11
 msgid "This Site Powered By"
-msgstr "Situs ini di dukung oleh"
+msgstr ""
 
 #: templates/footer.html:21
 msgid "Now Event"
-msgstr "Kegiatan sekarang"
+msgstr ""
 
 #: templates/footer.html:31
 msgid "Up Coming Event"
-msgstr "Kegiatan yang akan datang"
+msgstr ""
 
 #: templates/header.html:61
 msgid "Home"
-msgstr "Beranda"
+msgstr ""
 
 #: templates/header.html:62 templates/blog/home.html:5
 #: templates/blog/home.html.py:6 templates/blog/read.html:6
@@ -45,19 +45,19 @@ msgstr ""
 
 #: templates/header.html:63
 msgid "Documentation"
-msgstr "Dokumentasi"
+msgstr ""
 
 #: templates/header.html:65
 msgid "Installation"
-msgstr "Pemasangan"
+msgstr ""
 
 #: templates/header.html:66
 msgid "Minimal Specification"
-msgstr "Spesifikasi Terendah"
+msgstr ""
 
 #: templates/header.html:70
 msgid "Download"
-msgstr "Unduh"
+msgstr ""
 
 #: templates/header.html:71
 msgid "Screenshot"
@@ -65,57 +65,54 @@ msgstr ""
 
 #: templates/header.html:73
 msgid "About us"
-msgstr "Tentang Kami"
+msgstr ""
 
-#: templates/blog/home.html:5 templates/landing/home.html:38
+#: templates/blog/home.html:5 templates/landing/home.html:10
 msgid "Welcome to"
-msgstr "Selamat Datang di"
+msgstr ""
 
 #: templates/blog/home.html:6
-#, fuzzy
 msgid "Homepage"
-msgstr "Beranda"
+msgstr ""
 
 #: templates/blog/home.html:14
 msgid "ago"
-msgstr "yang lalu"
+msgstr ""
 
 #: templates/blog/home.html:21
 msgid "Continue reading"
-msgstr "Lanjutkan membaca"
+msgstr ""
 
 #: templates/blog/read.html:5
 msgid "Reading"
-msgstr "Sedang membaca"
+msgstr ""
 
-#: templates/landing/home.html:38
+#: templates/landing/home.html:10
 msgid "Avagata Edusystem"
-msgstr "Sistem Pendidikan Avagata"
+msgstr ""
 
-#: templates/landing/home.html:42
-msgid "Take a Tour"
-msgstr "Ambil tur"
-
-#: templates/landing/home.html:61
+#: templates/landing/home.html:30
 msgid "more details"
-msgstr "Lebih Detail"
+msgstr ""
 
-#: templates/landing/home.html:72
+#: templates/landing/home.html:41
 msgid "WHAT OTHERS SAY ABOUT US"
-msgstr "Apa yang orang katakan"
+msgstr ""
 
-#: templates/landing/home.html:74
+#: templates/landing/home.html:43
 msgid "from"
-msgstr "dari"
+msgstr ""
 
-#: templates/landing/home.html:86
+#: templates/landing/home.html:55
 msgid "Stay in touch with us"
-msgstr "Berhubungan dengan kami"
+msgstr ""
 
-#: templates/landing/home.html:87
+#: templates/landing/home.html:56
 msgid ""
 "Sign up for our weekly newsletter to receive updates, news, and interesting "
 "tidbits"
 msgstr ""
-"Daftar surat berita mingguan kami untuk menerima pembaruan, berita, dan "
-"informasi menarik"
+
+#: templates/landing/read.html:5
+msgid "Avagata's Feature"
+msgstr "Fitur Avagata"
